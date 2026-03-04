@@ -1,0 +1,152 @@
+{
+  "name": "Layerre Quick Start - Create Template & Create Variant",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "ade94e3e-17bb-4160-b301-16166c96583c",
+      "name": "When clicking \"Test workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        304,
+        272
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Layerre Quick Start Guide\n\nThis is the simplest possible Layerre workflow - perfect for getting started!\n\n## What This Does\n\n1. **Create template** – Import your Canva design as a Layerre template\n2. **Create variant** – Generate a single variant with custom text and image\n3. Returns the rendered image URL\n\n### Resources\n- [Layerre Documentation](https://layerre.com/docs)\n- [Community Templates](https://github.com/layerre/layerre-n8n-workflows)",
+        "height": 436,
+        "width": 444
+      },
+      "id": "66bf87df-bc46-43a8-8ce2-426e9ce2544e",
+      "name": "Quick Start Guide",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -224,
+        16
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Step 1: Create Template\n\n**Instructions:**\n1. Share your Canva design (\"Anyone with the link\"-> \"Can View\")\n2. Copy the share URL\n3. Paste it in the node below\n\n**You only need to do this once!**\n\nAfter creating the template, you can deactivate this node and reuse the template ID.",
+        "height": 292,
+        "width": 340,
+        "color": 7
+      },
+      "id": "5ade827c-bf8b-4ffb-8379-a3befdcc5573",
+      "name": "Step 1: Create Template",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        480,
+        -48
+      ]
+    },
+    {
+      "parameters": {
+        "requestOptions": {}
+      },
+      "id": "3ff8e000-fd95-48ef-8af3-f07451d2c7b8",
+      "name": "Create Template",
+      "type": "n8n-nodes-layerre.layerre",
+      "typeVersion": 1,
+      "position": [
+        592,
+        272
+      ],
+      "credentials": {}
+    },
+    {
+      "parameters": {
+        "content": "## Step 2: Create Variant\n\n**Instructions:**\n1. Select your template from the dropdown\n2. Click \"Add Layer Override\"\n3. Select a layer to customize\n4. Add override values (text, image URL, etc.)\n5. Execute to create your variant image!\n\n**Example overrides:**\n- Text layer: Change the text content\n- Image layer: Set a new image URL\n- Any layer: Adjust color, position, size",
+        "height": 328,
+        "width": 340,
+        "color": 7
+      },
+      "id": "1a81f966-08dd-401d-9159-a96936e829a7",
+      "name": "Step 2: Create Variant",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        880,
+        -80
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "variant",
+        "templateId": "",
+        "variantDimensions": {},
+        "overrides": {
+          "override": [
+            {
+              "layerId": "",
+              "overrideOptions": {
+                "text": ""
+              }
+            },
+            {
+              "layerId": "",
+              "overrideOptions": {
+                "text": "",
+                "color": "#4F46E5"
+              }
+            },
+            {
+              "layerId": "image",
+              "overrideOptions": {
+                "imgUrl": ""
+              }
+            }
+          ]
+        },
+        "requestOptions": {}
+      },
+      "id": "0619f2ff-866f-48fe-b707-9d8e58602982",
+      "name": "Create Variant",
+      "type": "n8n-nodes-layerre.layerre",
+      "typeVersion": 1,
+      "position": [
+        992,
+        272
+      ],
+      "credentials": {}
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking \"Test workflow\"": {
+      "main": [
+        [
+          {
+            "node": "Create Template",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Template": {
+      "main": [
+        [
+          {
+            "node": "Create Variant",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "ef0fc7a5-80ce-4ae3-b410-81c54336c188",
+  "meta": {},
+  "id": "fOXoLgS4DDMd5b9z",
+  "tags": []
+}
