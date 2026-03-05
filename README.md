@@ -6,9 +6,11 @@ Community workflow templates using the [n8n Layerre node](https://www.npmjs.com/
 
 **[Quick Start](templates/quick-start.json)** – Create template from a Canva design, then create a single variant. Good for learning. Needs: Layerre API key, Canva design.
 
-**[Spreadsheet to Variants](templates/spreadsheet-to-layerre-variants.json)** – Bulk personalized images using **Google Sheets (Get Rows)**. One row per variant. Preconfigured with the [Layerre Sheets Example](https://docs.google.com/spreadsheets/d/1x8X_qZaoXkrIKGVlhCC25du8ht42UKinRPtmjThpTSE/edit?usp=sharing) (2 columns: **Text**, **Image**). Needs: Layerre API key, Canva template, Google Sheet credentials.
+**[Spreadsheet to Layerre Images](templates/spreadsheet-to-layerre-variants.json)** – Bulk personalized images using **Google Sheets (Get Rows)**. One row per variant. Preconfigured with the [Layerre Sheets Example](https://docs.google.com/spreadsheets/d/1x8X_qZaoXkrIKGVlhCC25du8ht42UKinRPtmjThpTSE/edit?usp=sharing) (2 columns: **Text**, **Image**). Needs: Layerre API key, Canva template, Google Sheet credentials.
 
 **[Webhook to Layerre to Slack](templates/webhook-to-layerre-to-slack.json)** – **Webhook** (e.g. form submissions, Typeform, Tally) → create one personalized image per request → **Slack** (post to channel) and **Respond to Webhook** (return image URL). Needs: Layerre API key, Canva template, Slack credentials.
+
+**[Airtable to Layerre Images](templates/airtable-to-layerre-to-airtable.json)** – **Airtable (List records)** → create one variant per record → **Airtable (Update)** to write the rendered image URL back into each record. Needs: Layerre API key, Canva template, Airtable credentials.
 
 ## Setup
 
