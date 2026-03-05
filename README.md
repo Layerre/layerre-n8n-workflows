@@ -8,6 +8,8 @@ Community workflow templates using the [n8n Layerre node](https://www.npmjs.com/
 
 **[Spreadsheet to Variants](templates/spreadsheet-to-layerre-variants.json)** – Bulk personalized images using **Google Sheets (Get Rows)**. One row per variant. Preconfigured with the [Layerre Sheets Example](https://docs.google.com/spreadsheets/d/1x8X_qZaoXkrIKGVlhCC25du8ht42UKinRPtmjThpTSE/edit?usp=sharing) (2 columns: **Text**, **Image**). Needs: Layerre API key, Canva template, Google Sheet credentials.
 
+**[Webhook to Layerre to Slack](templates/webhook-to-layerre-to-slack.json)** – **Webhook** (e.g. form submissions, Typeform, Tally) → create one personalized image per request → **Slack** (post to channel) and **Respond to Webhook** (return image URL). Needs: Layerre API key, Canva template, Slack credentials.
+
 ## Setup
 
 1. **Install the node:** `npm install n8n-nodes-layerre` then restart n8n.
